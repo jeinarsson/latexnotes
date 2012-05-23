@@ -1,0 +1,114 @@
+%Paket
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[intlimits]{amsmath}
+\usepackage{ae}
+\usepackage{units}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{subfig}
+\usepackage{bbm}
+\usepackage{caption}
+\usepackage[square, numbers, sort]{natbib}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage[hyphens]{url}
+\usepackage[breaklinks,pdfpagelabels=false]{hyperref}
+\usepackage{braket}
+
+
+\newcommand{\diagram}[2]{\includegraphics[width=#2]{fig/diag_#1.pdf}}
+
+\newcommand{\Stokes}{\ensuremath{\mathrm{St}}}
+\newcommand{\Reynolds}{\ensuremath{\mathrm{Re}}}
+\newcommand{\Peclet}{\ensuremath{\mathrm{Pe}}}
+
+
+% Nya kommandon
+\newcommand{\N}{\ensuremath{\mathbbm{N}}}
+\newcommand{\Z}{\ensuremath{\mathbbm{Z}}}
+\newcommand{\Q}{\ensuremath{\mathbbm{Q}}}
+\newcommand{\R}{\ensuremath{\mathbbm{R}}}
+\newcommand{\C}{\ensuremath{\mathbbm{C}}}
+\newcommand{\rd}{\ensuremath{\mathrm{d}}}
+\newcommand{\id}{\ensuremath{\,\rd}}
+\newcommand{\diff}[2]{\ensuremath{\frac{\rd #1}{\rd #2}}}
+\newcommand{\pdiff}[2]{\ensuremath{\frac{\partial #1}{\partial #2}}}
+\newcommand\inv{^{-1}}
+\newcommand\transpose{^{\mathrm T}}
+\newcommand\zeroth{^{(0)}}
+\newcommand\first{^{(1)}}
+\newcommand\order[1]{^{(#1)}}
+\newcommand\mat[1]{#1}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\evalat}[1]{\,\bigg|_{#1}}
+\newcommand{\setdefaulthdr}{%
+\fancyhead[L]{\slshape \rightmark}%
+\fancyhead[R]{\slshape \leftmark}%
+\fancyfoot[C]{\thepage}%
+}
+\newcommand{\setspecialhdr}{%
+\fancyhead[L]{ }%
+\fancyhead[R]{\slshape \leftmark}%
+\fancyfoot[C]{\thepage}%
+}
+\newcommand{\mail}[1]{\href{mailto:#1}{\nolinkurl{#1}}}
+\newcommand{\backgroundpic}[3]{%
+	\put(#1,#2){
+		\parbox[b][\paperheight]{\paperwidth}{%
+			\vfill
+			\centering
+			\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{#3}
+			\vfill
+}}}
+
+\renewenvironment{abstract}%
+{\begin{center} \bfseries \abstractname \end{center}}%
+{\vspace{2\baselineskip}}%
+
+% Konfiguration
+\captionsetup{margin=10pt,font=small,labelfont=bf}
+\captionsetup[table]{position=top}
+\setlength{\extrarowheight}{4pt}
+\addtolength{\headheight}{\baselineskip}
+\pagestyle{fancy}
+\setdefaulthdr
+\bibliographystyle{numerical1}
+\hypersetup{
+		pdftitle={Report},%
+		pdfauthor={Jonas Einarsson},%
+    colorlinks=true,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=black
+}
+
+% Alter some LaTeX defaults for better treatment of figures:
+    % See p.105 of "TeX Unbound" for suggested values.
+    % See pp. 199-200 of Lamport's "LaTeX" book for details.
+    %   General parameters, for ALL pages:
+    \renewcommand{\topfraction}{0.9}	% max fraction of floats at top
+    \renewcommand{\bottomfraction}{0.8}	% max fraction of floats at bottom
+    %   Parameters for TEXT pages (not float pages):
+    \setcounter{topnumber}{2}
+    \setcounter{bottomnumber}{2}
+    \setcounter{totalnumber}{4}     % 2 may work better
+    \setcounter{dbltopnumber}{2}    % for 2-column pages
+    \renewcommand{\dbltopfraction}{0.9}	% fit big float above 2-col. text
+    \renewcommand{\textfraction}{0.07}	% allow minimal text w. figs
+    %   Parameters for FLOAT pages (not text pages):
+    \renewcommand{\floatpagefraction}{0.7}	% require fuller float pages
+	% N.B.: floatpagefraction MUST be less than topfraction !!
+    \renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
+
+	% remember to use [htp] or [htpb] for placement
+	
+	
+	
+
+
